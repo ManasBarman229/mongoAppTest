@@ -27,10 +27,10 @@
                     <select
                         class="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-full"
                         required="required" name="Language" id="Language">
-                        <option disabled value>Select Language</option>
-                        <option value="Assamese">Assamese</option>
-                        <option value="Bengali">Bengali</option>
-                        <option value="Bodo">Bodo</option>
+                        <option disabled value class="block mt-2 text-base font-semibold text-gray-700">Select Language</option>
+                        <option value="Assamese" class="block mt-2 text-base font-semibold text-gray-700" >Assamese</option>
+                        <option value="Bengali" class="block mt-2 text-base font-semibold text-gray-700" >Bengali</option>
+                        <option value="Bodo" class="block mt-2 text-base font-semibold text-gray-700">Bodo</option>
                     </select>
                 </div>
 
@@ -46,11 +46,17 @@
                     class="block w-full p-3 mt-2 text-gray-700 bg-gray-300 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
                     required />
 
-                <label for="Sentiment"
-                    class="block mt-2 text-xs font-extrabold text-gray-700 uppercase">Sentiment</label>
-                <input id="Sentiment" type="text" name="Sentiment" placeholder="Sentiment"
-                    class="block w-full p-3 mt-2 text-gray-700 bg-gray-300 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
-                    required />
+                <div class="w-full flex flex-col mb-3">
+                    <label class="font-bold text-gray-700 py-2">Sentiment<abbr title="required">*</abbr></label>
+                    <select
+                        class="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-full"
+                        required="required" name="Sentiment" id="Sentiment">
+                        <option disabled value class="block mt-2 text-base font-semibold text-gray-700">Select Sentiment</option>
+                        <option value="Assamese" class="block mt-2 text-base font-semibold text-gray-700" >Positive</option>
+                        <option value="Bengali" class="block mt-2 text-base font-semibold text-gray-700" >Negative</option>
+                        <option value="Bodo"class="block mt-2 text-base font-semibold text-gray-700" >Neutral</option>
+                    </select>
+                </div>                    
 
                 <button type="submit"
                     class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
