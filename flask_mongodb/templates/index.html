@@ -4,126 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <title>Form</title>
+    <title>Data collection</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1 id="title">Student Data Form</h1>
-    <div id="form-outer">
-        <p id="description">
-            To know the details of students
-        </p>
-        <form id="survey-form" method="POST" action="/data">
-            <div class="rowTab">
-                <div class="labels">
-                    <label id="name-label" for="name">Full Name: </label>
-                </div>
-                <div class="rightTab">
-                    <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name"
-                        required>
-                </div>
-            </div>
-    
-            <div class="rowTab">
-                <div class="labels">
-                    <label id="email-label" for="email">Email: </label>
-                </div>
-                <div class="rightTab">
-                    <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
-                </div>
-            </div>
-    
-            <div class="rowTab">
-                <div class="labels">
-                    <label id="number-label" for="age">Age: </label>
-                </div>
-                <div class="rightTab">
-                    <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age"
-                        required>
-                </div>
-            </div>
-    
-            <div class="rowTab">
-                <div class="labels">
-                    <label id="dob-label" for="dob">D.O.B: </label>
-                </div>
-                <div class="rightTab">
-                    <input type="date" name="dob" id="iddob" class="input-field" required>
-                </div>
-            </div>
-    
-            <div class="rowTab">
-                <div class="labels">
-                    <label for="department">Department: </label>
-                </div>
-                <div class="rightTab">
-                    <select id="dropdown" name="department" class="dropdown">
-                        <option disabled value>Select an option</option>
-                        <option value="Information Technology">IT</option>
-                        <option value="Computer Science Engineering">CSE</option>
-                        <option value="Electronics and Communication Engineering">ECE</option>
-                        <option value="Mechanical Engineering">MECH</option>
-                        <option value="Civil Engineering">CIVIL</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-            </div>
-    
-            <div class="rowTab">
-                <div class="labels">
-                    <label for="gender">Gender: </label>
-                </div>
-                <div class="rightTab">
-                    <ul style="list-style: none;">
-                        <label class="radio-inline"><input name="gender" value="Male" type="radio">Male</label>
-                        <label class="radio-inline"><input name="gender" value="Female" type="radio">Female</label>
-                        <label class="radio-inline"><input name="gender" value="others" type="radio">Others</label>
-                    </ul>
-                </div>
-            </div>
-            <div class="rowTab">
-                <div class="labels">
-                    <label for="address">Address: </label>
-                </div>
-                <div class="rightTab">
-                    <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="address"
-                        placeholder="Enter your address here..."></textarea>
-                </div>
-            </div>
-            <div class="rowTab">
-                <div class="labels">
-                    <label for="pincode">Pincode: </label>
-                </div>
-                <div class="rightTab">
-                    <input type="number" name="pincode" id="idpincode" class="input-field"
-                        style="height:20px;resize:vertical;" placeholder="6 - - - - -">
-                </div>
-            </div>
-    
-            <div class="rowTab">
-                <div class="labels">
-                    <label for="language">Language Known: </label>
-                </div>
-                <div class="rightTab">
-                    <ul id="language" style="list-style: none;">
-                        <li class="checkbox"><label><input name="language1" value="English" type="checkbox"
-                                    class="userRatings">English</label></li>
-                        <li class="checkbox"><label><input name="language2" value="Marathi" type="checkbox"
-                                    class="userRatings">Tamil</label></li>
-                        <li class="checkbox"><label><input name="language3" value="Hindi" type="checkbox"
-                                    class="userRatings">Hindi</label></li>
-                        <li class="checkbox"><label><input name="language5" value="Kannada" type="checkbox"
-                                    class="userRatings">Kannada</label></li>
-                        <li class="checkbox"><label><input name="language7" value="others" type="checkbox"
-                                    class="userRatings">Others</label></li>
-                    </ul>
-                </div>
-            </div>
-    
-            <button id="submit" type="submit">Submit</button>
-            <button id="reset" type="reset">Reset</button>
-        </form>
-    </div>
-    </body>
-</html>
 
+    <div class="grid min-h-screen place-items-center">
+        <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
+            <h1 class="text-xl font-semibold">Hello there ?, <span class="font-normal">Enter text in Original language and in Transliterated form. for e.g<br>Original Text:"মোৰ নাম ___"<br>Transliterated text:"mur naam ____"
+            </span></h1>
+            <form form id="survey-form" method="POST" action="/data" class="mt-6">
+                
+                <label for="Original" class="block mt-2 text-xs font-extrabold text-gray-700 uppercase">Original Text</label>
+                <input id="Original" type="text" name="Original" placeholder="Enter Original text here" 
+                    class="block w-full p-3 mt-2 text-gray-700 bg-gray-300 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                    required />
+                <label for="Transliterated" class="block mt-2 text-xs font-extrabold text-gray-700 uppercase">Transliterated Text</label>
+                <input id="Transliterated" type="text" name="Transliterated" placeholder="Enter Transliterated text here"
+                        class="block w-full p-3 mt-2 text-gray-700 bg-gray-300 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                        required />
+                
+                <label for="Sentiment" class="block mt-2 text-xs font-extrabold text-gray-700 uppercase">Sentiment</label>
+                <input id="Sentiment" type="text" name="Sentiment" placeholder="Sentiment"
+                        class="block w-full p-3 mt-2 text-gray-700 bg-gray-300 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                        required />
+
+
+                <button type="submit"
+                    class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

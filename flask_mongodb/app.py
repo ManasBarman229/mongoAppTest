@@ -23,22 +23,9 @@ def home():
 def data():
     data = {}
     if request.method == "POST":
-        data['Name'] = request.form['name']
-        data['Email'] = request.form['email']
-        data['Age'] = request.form['age']
-        data['DOB'] = request.form['dob']
-        data['Department'] = request.form['department']
-        data['Gender'] = request.form['gender']
-        data['Address'] = request.form['address']
-        data['Pincode'] = request.form['pincode']
-        lang = []
-        for i in "1234567":
-            try:
-                if request.form['language' + i] != "":
-                    lang.append(request.form['language' + i])
-            except Exception as e:
-                pass
-        data['Language'] = lang
+        data['Original_Text'] = request.form['Original']
+        data['Transliterated_Text'] = request.form['Transliterated']
+        data['Sentiment'] = request.form['Sentiment']
         db.studentData.insert_one(data)
 
     return render_template("index.html")
