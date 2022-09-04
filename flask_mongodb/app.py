@@ -23,9 +23,11 @@ def home():
 def data():
     data = {}
     if request.method == "POST":
+        data['Language'] = request.form['Language']
         data['Original_Text'] = request.form['Original']
         data['Transliterated_Text'] = request.form['Transliterated']
         data['Sentiment'] = request.form['Sentiment']
+
         db.studentData.insert_one(data)
 
     return render_template("index.html")

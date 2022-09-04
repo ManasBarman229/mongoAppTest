@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data collection</title>
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body>
 
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data collection</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body>
     <div class="grid min-h-screen place-items-center">
         <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
-            <h1 class="text-xl font-semibold">Hello there ?, <span class="font-normal">Enter text in Original language and in Transliterated form. for e.g<br>Original Text:"মোৰ নাম ___"<br>Transliterated text:"mur naam ____"
-            </span></h1>
+            <h1 class="text-xl font-semibold">
+                Hi,Welcome To Transliteration Portal<span class="font-normal">Enter text in Original language and in
+                    Transliterated form. for
+                    e.g<br />Original Text:"মোৰ নাম ___"<br />Transliterated text:"mur
+                    naam ____"
+                    <br />
+                    Sentiment: "Neutral"
+                </span>
+            </h1>
             <form form id="survey-form" method="POST" action="/data" class="mt-6">
-                
-                <label for="Original" class="block mt-2 text-xs font-extrabold text-gray-700 uppercase">Original Text</label>
-                <input id="Original" type="text" name="Original" placeholder="Enter Original text here" 
+                <div class="w-full flex flex-col mb-3">
+                    <label class="font-semibold text-gray-600 py-2">Language<abbr title="required">*</abbr></label>
+                    <select
+                        class="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-full"
+                        required="required" name="Language" id="Language">
+                        <option disabled value>Select Language</option>
+                        <option value="Assamese">Assamese</option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Bodo">Bodo</option>
+                    </select>
+                </div>
+
+                <label for="Original" class="block mt-2 text-xs font-extrabold text-gray-700 uppercase">Original
+                    Text</label>
+                <input id="Original" type="text" name="Original" placeholder="Enter Original text here"
                     class="block w-full p-3 mt-2 text-gray-700 bg-gray-300 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
                     required />
-                <label for="Transliterated" class="block mt-2 text-xs font-extrabold text-gray-700 uppercase">Transliterated Text</label>
-                <input id="Transliterated" type="text" name="Transliterated" placeholder="Enter Transliterated text here"
-                        class="block w-full p-3 mt-2 text-gray-700 bg-gray-300 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
-                        required />
-                
-                <label for="Sentiment" class="block mt-2 text-xs font-extrabold text-gray-700 uppercase">Sentiment</label>
-                <input id="Sentiment" type="text" name="Sentiment" placeholder="Sentiment"
-                        class="block w-full p-3 mt-2 text-gray-700 bg-gray-300 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
-                        required />
+                <label for="Transliterated"
+                    class="block mt-2 text-xs font-extrabold text-gray-700 uppercase">Transliterated Text</label>
+                <input id="Transliterated" type="text" name="Transliterated"
+                    placeholder="Enter Transliterated text here"
+                    class="block w-full p-3 mt-2 text-gray-700 bg-gray-300 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                    required />
 
+                <label for="Sentiment"
+                    class="block mt-2 text-xs font-extrabold text-gray-700 uppercase">Sentiment</label>
+                <input id="Sentiment" type="text" name="Sentiment" placeholder="Sentiment"
+                    class="block w-full p-3 mt-2 text-gray-700 bg-gray-300 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                    required />
 
                 <button type="submit"
                     class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
@@ -38,4 +60,5 @@
         </div>
     </div>
 </body>
+
 </html>
