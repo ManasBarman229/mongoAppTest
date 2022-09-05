@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
     <title>Dataset collection</title>
+    
 </head>
 <body>
     <section class="bg-gray-100">
@@ -33,13 +34,14 @@
                     <h1 class="text-xl font-semibold">
                         Fill up the following fields: 
                     </h1>
-                    <form form id="survey-form" method="POST" action="/data" class="mt-6">
+                    <form  form id="survey-form" method="POST" action="/data"  class="mt-6">
                         <div class="w-full flex flex-col mb-3">
                             <label class="font-semibold text-gray-600 py-2">Language<abbr title="required">*</abbr></label>
                             <select
                                 class="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-full"
                                 required="required" name="Language" id="Language">
                                 <option disabled value class="block mt-2 text-base font-semibold text-gray-700">Select Language</option>
+                                <option value="English" class="block mt-2 text-base font-semibold text-gray-700">English</option>
                                 <option value="Assamese" class="block mt-2 text-base font-semibold text-gray-700">Assamese</option>
                                 <option value="Bengali" class="block mt-2 text-base font-semibold text-gray-700">Bengali</option>
                                 <option value="Bodo" class="block mt-2 text-base font-semibold text-gray-700">Bodo</option>
@@ -78,10 +80,6 @@
             </div>
         </div>
     </section>
-<!-- <script>
-    function myFunction() {
-        alert("Data submitted Successfully");
-    }
-</script> -->
+
 </body>
 </html>
