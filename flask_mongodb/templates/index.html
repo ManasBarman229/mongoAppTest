@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/static/img/favicon-16x16.png" type="image/x-icon">
     <title>Dataset collection</title>
     
 </head>
@@ -23,40 +24,45 @@
                         </span>
                     </h1>
     
-                    <!-- <div class="mt-8">
-                        <a href="" class="text-2xl font-bold text-pink-600"> 0151 475 4450 </a>
+                    <div class="mt-8">
+                        <a href="" class="text-2xl font-bold text-pink-600"> CIT</a>
     
-                        <address class="mt-2 not-italic">282 Kevin Brook, Imogeneborough, CA 58517</address>
-                    </div> -->
+                        <address class="mt-2 not-italic">Kokrajhar,Assam</address>
+                    </div>
                 </div>
     
-                <div class="p-8 bg-white rounded-lg shadow-lg lg:p-12 lg:col-span-3">
+                <div class="p-8 bg-white rounded-xl shadow-2xl lg:p-12 lg:col-span-3">
                     <h1 class="text-xl font-semibold">
                         Fill up the following fields: 
                     </h1>
                     <form  form id="survey-form" method="POST" action="/data"  class="mt-6">
-                        <div class="w-full flex flex-col mb-3">
-                            <label class="font-semibold text-gray-600 py-2">Language<abbr title="required">*</abbr></label>
-                            <select
-                                class="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-full"
-                                required="required" name="Language" id="Language">
-                                <option disabled value class="block mt-2 text-base font-semibold text-gray-700">Select Language</option>
-                                <option value="English" class="block mt-2 text-base font-semibold text-gray-700">English</option>
-                                <option value="Assamese" class="block mt-2 text-base font-semibold text-gray-700">Assamese</option>
-                                <option value="Bengali" class="block mt-2 text-base font-semibold text-gray-700">Bengali</option>
-                                <option value="Bodo" class="block mt-2 text-base font-semibold text-gray-700">Bodo</option>
-                            </select>
+                        <div class="flow-root">
+                            <div class=" flex flex-col mb-3 float-left">
+                                <label class="font-semibold text-gray-600 py-2">Language<abbr title="required">*</abbr></label>
+                                <select
+                                    class="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-full"
+                                    required="required" name="Language" id="Language">
+                                    <option disabled value class="block mt-2 text-base font-semibold text-gray-700">Select Language</option>
+                                    <option value="English" class="block mt-2 text-base font-semibold text-gray-700">English</option>
+                                    <option value="Assamese" class="block mt-2 text-base font-semibold text-gray-700">Assamese</option>
+                                    <option value="Bengali" class="block mt-2 text-base font-semibold text-gray-700">Bengali</option>
+                                    <option value="Bodo" class="block mt-2 text-base font-semibold text-gray-700">Bodo</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col mb-3 pl-10">
+                                <label for="Original" class="  mt-2 font-semibold text-gray-700 ">Original Text<abbr title="required">*</abbr></label>
+                                <input id="Original" type="text" name="Original" placeholder="Enter Original text here"
+                                    class="block pr-10px p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner rounded-lg"
+                                    required />
+                            </div>
                         </div>
+                        
                     
-                        <label for="Original" class="block mt-2 text-xs font-extrabold text-gray-700 uppercase">Original
-                            Text</label>
-                        <input id="Original" type="text" name="Original" placeholder="Enter Original text here"
-                            class="block w-full p-3 mt-2 text-gray-700 bg-gray-300 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
-                            required />
+                        
                         <label for="Transliterated" class="block mt-2 text-xs font-extrabold text-gray-700 uppercase">Transliterated
                             Text</label>
                         <input id="Transliterated" type="text" name="Transliterated" placeholder="Enter Transliterated text here"
-                            class="block w-full p-3 mt-2 text-gray-700 bg-gray-300 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                            class="block w-full p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner rounded-lg"
                             required />
                     
                         <div class="w-full flex flex-col mb-3">
@@ -72,7 +78,7 @@
                         </div>
                     
                         <button  type="submit"
-                            class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
+                            class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none rounded-xl">
                             Submit
                         </button>
                     </form>
