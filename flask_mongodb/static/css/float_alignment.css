@@ -1,0 +1,22 @@
+#container {
+    float: left;
+    
+}
+#Original-container{
+    padding-left: 25px;
+}
+@media only screen and (max-width: 900px) {
+    #container {
+        float: none;
+    }
+        #Original {
+            padding-right:0;
+        }
+
+}
+@media only screen and (max-width: 900px) {
+        #Original-container {
+            padding-left: 0;
+        }
+
+}

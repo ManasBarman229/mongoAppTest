@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/static/img/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/float_alignment.css">
     <title>Dataset collection</title>
     
 </head>
@@ -37,7 +38,7 @@
                     </h1>
                     <form  form id="survey-form" method="POST" action="/data"  class="mt-6">
                         <div class="flow-root">
-                            <div class=" flex flex-col mb-3 float-left">
+                            <div id="container" class="flex flex-col mb-3">
                                 <label class="font-semibold text-gray-600 py-2">Language<abbr title="required">*</abbr></label>
                                 <select
                                     class="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-full"
@@ -49,10 +50,10 @@
                                     <option value="Bodo" class="block mt-2 text-base font-semibold text-gray-700">Bodo</option>
                                 </select>
                             </div>
-                            <div class="flex flex-col mb-3 pl-10">
+                            <div id="Original-container" class="flex flex-col mb-3 ">
                                 <label for="Original" class="  mt-2 font-semibold text-gray-700 ">Original Text<abbr title="required">*</abbr></label>
                                 <input id="Original" type="text" name="Original" placeholder="Enter Original text here"
-                                    class="block pr-10px p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner rounded-lg"
+                                    class="block  p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner rounded-lg"
                                     required />
                             </div>
                         </div>
