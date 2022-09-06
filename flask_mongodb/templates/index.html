@@ -34,12 +34,16 @@
     
                 <div class="p-8 bg-white rounded-xl shadow-2xl lg:p-12 lg:col-span-3">
                     <h1 class="text-xl font-semibold">
-                        Fill up the following fields: 
+                        Transliterated One language using  another language: 
                     </h1>
                     <form  form id="survey-form" method="POST" action="/data"  class="mt-6">
                         <div class="flow-root">
+                            <!--original text and language container-->
+                            <h2 class="text-center text-l pb-5 font-semibold text-gray-700">
+                                From
+                            </h2>
                             <div id="container" class="flex flex-col mb-3">
-                                <label class="font-semibold text-gray-600 py-2">Language<abbr title="required">*</abbr></label>
+                                <label class="font-semibold text-gray-600 py-2"> Original Language<abbr title="required">*</abbr></label>
                                 <select
                                     class="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-full"
                                     required="required" name="Language" id="Language">
@@ -51,21 +55,42 @@
                                 </select>
                             </div>
                             <div id="Original-container" class="flex flex-col mb-3 ">
-                                <label for="Original" class="  mt-2 font-semibold text-gray-700 ">Original Text<abbr title="required">*</abbr></label>
+                                <label for="Original" class="  mt-2 font-semibold text-gray-600 ">Original Text<abbr title="required">*</abbr></label>
                                 <input id="Original" type="text" name="Original" placeholder="Enter Original text here"
                                     class="block  p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner rounded-lg"
+                                    required />
+                            </div>
+                        </div>
+
+
+                        <div class="flow-root">
+                            <h2 class=" text-center pb-5 text-l font-semibold text-gray-700">
+                                To
+                            </h2>
+                            <!--Transliterate text and language container-->
+                            <div id="container_2" class="flex flex-col mb-3">
+                                <label class="font-semibold text-gray-600 py-2"> Transliterated Language<abbr title="required">*</abbr></label>
+                                <select
+                                    class="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-full"
+                                    required="required" name="Language" id="Language">
+                                    <option disabled value class="block mt-2 text-base font-semibold text-gray-700">Select Language</option>
+                                    <option value="English" class="block mt-2 text-base font-semibold text-gray-700">English</option>
+                                    <option value="Assamese" class="block mt-2 text-base font-semibold text-gray-700">Assamese</option>
+                                    <option value="Bengali" class="block mt-2 text-base font-semibold text-gray-700">Bengali</option>
+                                    <option value="Bodo" class="block mt-2 text-base font-semibold text-gray-700">Bodo</option>
+                                </select>
+                            </div>
+                            <div id="transliterate_container" class="flex flex-col mb-3 ">
+                                <label for="Transliterated" class="block mt-2 font-semibold text-gray-600 ">Transliterated
+                                    Text</label>
+                                <input id="Transliterated" type="text" name="Transliterated" placeholder="Enter Transliterated text here"
+                                    class="block w-full p-3 mt-2 text-gray-600 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner rounded-lg"
                                     required />
                             </div>
                         </div>
                         
                     
                         
-                        <label for="Transliterated" class="block mt-2 text-xs font-extrabold text-gray-700 uppercase">Transliterated
-                            Text</label>
-                        <input id="Transliterated" type="text" name="Transliterated" placeholder="Enter Transliterated text here"
-                            class="block w-full p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner rounded-lg"
-                            required />
-                    
                         <div class="w-full flex flex-col mb-3">
                             <label class="font-bold text-gray-700 py-2">Sentiment<abbr title="required">*</abbr></label>
                             <select

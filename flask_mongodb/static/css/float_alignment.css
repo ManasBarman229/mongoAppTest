@@ -20,3 +20,29 @@
         }
 
 }
+#container_2 {
+    float: left;
+
+}
+
+#transliterate_container {
+    padding-left: 25px;
+}
+
+@media only screen and (max-width: 900px) {
+    #container_2 {
+        float: none;
+    }
+        #transliterate_container {
+            padding-left: 0;
+        }
+
+
+}
+
+/* @media only screen and (max-width: 900px) {
+    #transliterate_container {
+        padding-left: 0;
+    } */
+
+}
