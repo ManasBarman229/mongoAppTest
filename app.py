@@ -25,9 +25,12 @@ def home():
 def data():
     data = {}
     if request.method == "POST":
-        data['Language'] = request.form['Language']
-        data['Original_Text'] = request.form['Original']
-        data['Transliterated_Text'] = request.form['Transliterated']
+        data['Original_language'] = request.form['Original_language']
+        data['Original_Text'] = request.form['Original_text']
+        data['Transliterate_language_1'] = request.form['Transliterate_language_1']
+        data['Transliterated_text_1'] = request.form['Transliterated_text_1']
+        data['Transliterate_language_2'] = request.form['Transliterate_language_2']
+        data['Transliterated_text_2'] = request.form['Transliterated_text_2']
         data['Sentiment'] = request.form['Sentiment']
 
         db.projectData.insert_one(data)

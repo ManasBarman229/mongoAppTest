@@ -18,7 +18,7 @@
                     <h1 class="text-xl font-semibold">
                         Hi,Welcome To Transliteration Portal<br><span class="font-normal">Enter text in Original language and in
                             Transliterated form. for
-                            e.g<br />Original Text:"মোৰ নাম ___"<br />Transliterated text:"mur
+                            e.g<br />Original Language: "English" <br />Original Text:  "My name is ____"<br />Transliterate Language:  "Assamese"<br/>Transliterate text: "mur
                             naam ____"
                             <br />
                             Sentiment: "Neutral"
@@ -46,7 +46,7 @@
                                 <label class="font-semibold text-gray-700 py-2"> Original Language<abbr title="required">*</abbr></label>
                                 <select
                                     class="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-32"
-                                    required="required" name="Language" id="Language">
+                                    required="required" name="Original_language" id="Original_language">
                                     <option disabled value class="block mt-2 text-base font-semibold text-gray-700">Select Language</option>
                                     <option value="English" class="block mt-2 text-base font-semibold text-gray-700">English</option>
                                     <option value="Assamese" class="block mt-2 text-base font-semibold text-gray-700">Assamese</option>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="flex flex-col mb-3 md:pl-6">
                                 <label for="Original" class="  mt-2 font-semibold text-gray-700 ">Original Text<abbr title="required">*</abbr></label>
-                                <input id="Original" type="text" name="Original" placeholder="Enter Original text here"
+                                <input id="Original_text" type="text" name="Original_text" placeholder="Enter Original text here"
                                     class="block  p-2 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner rounded-lg"
                                     required />
                             </div>
@@ -72,7 +72,7 @@
                                 <label class="font-semibold text-gray-700 py-2"> Transliterated <abbr title="required">*</abbr></label>
                                 <select
                                     class="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-32"
-                                    required="required" name="Language" id="Language">
+                                    required="required" name="Transliterate_language_1" id="Transliterate_language_1">
                                     <option disabled value class="block mt-2 text-base font-semibold text-gray-700">Select Language</option>
                                     <option value="Assamese" class="block mt-2 text-base font-semibold text-gray-700">Assamese</option>
                                     <option value="Bengali" class="block mt-2 text-base font-semibold text-gray-700">Bengali</option>
@@ -82,7 +82,7 @@
                             <div class="flex flex-col mb-3 md:pl-8">
                                 <label for="Transliterated" class="block mt-2 font-semibold text-gray-700 ">Transliterated
                                     Text</label>
-                                <input type="text" name="Transliterated" placeholder="Enter Transliterated text here"
+                                <input type="text" name="Transliterated_text_1" placeholder="Enter Transliterated text here"
                                     class="block w-full p-2 mt-2 text-gray-600 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner rounded-lg"
                                     required />
                             </div>
@@ -94,10 +94,10 @@
                             </p>
                             <!--Transliterate text and language container-->
                             <div class="flex flex-col mb-3 md:float-left">
-                                <label class="font-semibold text-gray-700 pb-1"> Transliterated</label>
+                                <label for="Transliterate_language_2" class="font-semibold text-gray-700 pb-1"> Transliterated</label>
                                 <select
                                     class="block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4 md:w-32"
-                                    name="Language" id="Language">
+                                    name="Transliterate_language_2" id="Transliterate_language_2">
                                     <option disabled value class="block mt-2 text-base font-semibold text-gray-700">Select Language</option>
                                     <option value="Assamese" class="block mt-2 text-base font-semibold text-gray-700">Assamese</option>
                                     <option value="Bengali" class="block mt-2 text-base font-semibold text-gray-700">Bengali</option>
@@ -105,9 +105,9 @@
                                 </select>
                             </div>
                             <div class="flex flex-col mb-3 md:pl-8">
-                                <label for="Transliterated" class="block mt-0 font-semibold text-gray-700 ">Transliterated
+                                <label for="Transliterated_text_2" class="block mt-0 font-semibold text-gray-700 ">Transliterated
                                     Text</label>
-                                <input type="text" name="Transliterated" placeholder="Enter Transliterated text here"
+                                <input type="text" name="Transliterated_text_2" placeholder="Enter Transliterated text here"
                                     class="block w-full p-2 mt-2 text-gray-600 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner rounded-lg"
                                     required />
                             </div>
