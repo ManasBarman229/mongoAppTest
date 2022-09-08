@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    
+    <title>Document</title>
+</head>
+<body>
+    
+<!--
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+<div>
+    <label for="price" class="block text-sm font-medium text-gray-700">Original Text</label>
+    <div class="relative mt-1 rounded-md shadow-sm">
+        
+        <input type="text" name="price" id="price"
+            class="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            placeholder="0.00">
+        <div class="absolute inset-y-0 right-0 flex items-center">
+            <label for="currency" class="sr-only">Language</label>
+            <select id="currency" name="currency"
+                class="h-full rounded-md border-transparent bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                <option>Assamese</option>
+                <option>English</option>
+                <option>bodo</option>
+                <option>Bengali</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+
+    
+</body>
+</html>
